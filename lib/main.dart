@@ -5,8 +5,7 @@ main() {
   runApp(AppWidget(titulo: 'video #6'));
 }
 
-//Video #6 https://youtu.be/4CCW_cdVBQg
-//widget sem estado, sem animação...
+//Video #7 https://youtu.be/nCYtIyrSRpg?list=PLlBnICoI-g-d-J57QIz6Tx5xtUDGQdBFB
 class AppWidget extends StatelessWidget {
   final String titulo;
 
@@ -15,12 +14,13 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-          titulo,
-          textDirection: TextDirection.ltr,
-          style: TextStyle(color: Colors.white, fontSize: 45.0),
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
+      home: Container(
+        child: Center(
+          child: Text(titulo),
         ),
       ),
     );
