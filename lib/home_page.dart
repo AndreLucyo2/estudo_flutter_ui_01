@@ -23,8 +23,7 @@ class HomePageState extends State<HomePage> {
           width: 200,
           height: 200,
           color: Colors.amber,
-          child: Align(
-            alignment: Alignment.center,
+          child: Center(
             child: Container(
               width: 100,
               height: 100,
