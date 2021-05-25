@@ -19,20 +19,18 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home Page')),
-      body: Center(
-        //GestureDetector detecta gestos em um widget toque por exemplo
-        child: GestureDetector(
-          child: Text('tocou :$contador', style: TextStyle(fontSize: 50)),
-          //evento de toque: executa quando for clicado:
-          onTap: () {
-            //Modifica o estado da variavel: o setState refaz o Build
-            setState(() {
-              contador++;
-            });
-            print('Clicado no Botão :$contador!!!');
-          },
-        ),
-      ),
+      body: Container(
+          width: 200,
+          height: 200,
+          color: Colors.amber,
+          child: Align(
+            alignment: Alignment.center,
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.black,
+            ),
+          )),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
