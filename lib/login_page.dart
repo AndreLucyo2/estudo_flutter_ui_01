@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
         height: double.infinity,
         child: Padding(
           //adicionado Padding
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -28,6 +28,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
 
+              //Separador
+              Container(height: 20),
+
               TextField(
                 //Ocultar senha:
                 obscureText: true,
@@ -35,6 +38,21 @@ class _LoginPageState extends State<LoginPage> {
                   labelText: 'Senha',
                   border: OutlineInputBorder(),
                 ),
+                //Pega o valor do campo:
+                onChanged: (text) {
+                  print(text);
+                },
+              ),
+
+              //Separador
+              Container(height: 20),
+
+              //Criar um botão
+              ElevatedButton(
+                child: Text('Entrar'),
+                onPressed: () {
+                  print('Clicou!');
+                },
               ),
             ],
           ),
