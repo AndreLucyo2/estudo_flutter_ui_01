@@ -26,6 +26,10 @@ class _LoginPageState extends State<LoginPage> {
                   labelText: 'Email',
                   border: OutlineInputBorder(),
                 ),
+                //Pega o valor do campo:
+                onChanged: (text) {
+                  print(text);
+                },
               ),
 
               //Separador
