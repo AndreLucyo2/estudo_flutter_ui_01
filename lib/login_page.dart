@@ -14,7 +14,12 @@ class _LoginPageState extends State<LoginPage> {
         height: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [TextField()],
+          children: [
+            //Campo de texto:
+            TextField(
+              decoration: InputDecoration(border: OutlineInputBorder()),
+            ),
+          ],
         ),
       ),
     );
