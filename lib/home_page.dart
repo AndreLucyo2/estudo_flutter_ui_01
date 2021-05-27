@@ -32,12 +32,10 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         //pega toda a altura da tela
         height: double.infinity,
-        //fali a linhamentos da Coluna:
-        child: Column(
+        //linhamentos da linhas:
+        child: Row(
           //Alinhamento do eixo principal Vertical
           mainAxisAlignment: MainAxisAlignment.center,
-          //Alinhamento dos filhos, cada um dos filhos
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Contagem $contador'),
             CustomSwtch(),
