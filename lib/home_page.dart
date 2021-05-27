@@ -1,3 +1,4 @@
+import 'package:estudo_flutter_ui_01/app_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,20 +16,17 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int contador = 0;
 
-  //pega o valor para mudar o estado:
-  bool isDarkTheme = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home Page')),
       body: Center(
         child: Switch(
-          value: isDarkTheme,
+          //Seta o valor da variavel do controller:
+          value: AppController.getInstancia.isDarkTheme,
           onChanged: (value) {
-            setState(() {
-              isDarkTheme = value;
-            });
+            //Executa o metodo para alternar o thema:
+            AppController.getInstancia.alternarThema();
           },
         ),
       ),
