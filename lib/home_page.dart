@@ -33,12 +33,31 @@ class HomePageState extends State<HomePage> {
         //pega toda a altura da tela
         height: double.infinity,
         //linhamentos da linhas:
-        child: Row(
+        child: Column(
           //Alinhamento do eixo principal Vertical
           mainAxisAlignment: MainAxisAlignment.center,
+
           children: [
             Text('Contagem $contador'),
+            Container(height: 10, color: Colors.amber),
             CustomSwtch(),
+            Container(height: 10, color: Colors.red),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.green),
+            CustomSwtch(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              //Usando container como separador
+              children: [
+                Container(width: 30, height: 30, color: Colors.amber),
+                CustomSwtch(),
+                Container(width: 30, height: 30, color: Colors.red),
+                CustomSwtch(),
+                Container(width: 30, height: 30, color: Colors.green),
+                CustomSwtch(),
+              ],
+            ),
           ],
         ),
       ),
