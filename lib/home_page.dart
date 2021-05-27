@@ -1,5 +1,4 @@
 import 'package:estudo_flutter_ui_01/CustomWidget/custom_swtch.dart';
-import 'package:estudo_flutter_ui_01/app_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
