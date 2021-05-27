@@ -59,7 +59,18 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 child: Text('Entrar'),
                 onPressed: () {
-                  print('Clicou!');
+                  //Faz a validação do login:
+                  if (email.isEmpty && senha.isEmpty) {
+                    print('Campo senha e email nao podem ser vazios!');
+                    return;
+                  }
+                  if (email == 'als@gmail.com' && senha == '123') {
+                    print('Parabens voce logou!');
+                    return;
+                  } else {
+                    print('Senha ou email inválidos!');
+                    return;
+                  }
                 },
               ),
             ],
