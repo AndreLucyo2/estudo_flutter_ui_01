@@ -12,14 +12,18 @@ class _LoginPageState extends State<LoginPage> {
       child: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //Campo de texto:
-            TextField(
-              decoration: InputDecoration(border: OutlineInputBorder()),
-            ),
-          ],
+        child: Padding(
+          //adicionado Padding
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //Campo de texto:
+              TextField(
+                decoration: InputDecoration(border: OutlineInputBorder()),
+              ),
+            ],
+          ),
         ),
       ),
     );
