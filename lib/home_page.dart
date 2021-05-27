@@ -37,7 +37,7 @@ class HomePageState extends State<HomePage> {
           //Alinhamento do eixo principal
           mainAxisAlignment: MainAxisAlignment.center,
           //Alinhamento dos filhos, cada um dos filhos
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Contagem $contador'),
             CustomSwtch(),
