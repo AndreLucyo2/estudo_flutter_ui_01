@@ -1,5 +1,6 @@
 //----------------------------------------------------------------------
 import 'package:estudo_flutter_ui_01/app_controller.dart';
+import 'package:estudo_flutter_ui_01/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
@@ -19,8 +20,8 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          //Abre a pagina home:
-          home: HomePage(),
+          //Abre a pagina:
+          home: LoginPage(),
         );
       },
     );
