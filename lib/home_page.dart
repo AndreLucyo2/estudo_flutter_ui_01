@@ -34,7 +34,7 @@ class HomePageState extends State<HomePage> {
         height: double.infinity,
         //fali a linhamentos da Coluna:
         child: Column(
-          //Alinhamento do eixo principal
+          //Alinhamento do eixo principal Vertical
           mainAxisAlignment: MainAxisAlignment.center,
           //Alinhamento dos filhos, cada um dos filhos
           crossAxisAlignment: CrossAxisAlignment.start,
