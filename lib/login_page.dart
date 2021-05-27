@@ -6,6 +6,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  //Guarda os valores dos campos
+  String email = '';
+  String senha = '';
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -28,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //Pega o valor do campo:
                 onChanged: (text) {
-                  print(text);
+                  email = text;
                 },
               ),
 
@@ -44,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //Pega o valor do campo:
                 onChanged: (text) {
-                  print(text);
+                  senha = text;
                 },
               ),
 
