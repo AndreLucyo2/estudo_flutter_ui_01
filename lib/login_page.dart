@@ -20,7 +20,21 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               //Campo de texto:
               TextField(
-                decoration: InputDecoration(border: OutlineInputBorder()),
+                //Definir o tipo de teclado
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+              TextField(
+                //Ocultar senha:
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Senha',
+                  border: OutlineInputBorder(),
+                ),
               ),
             ],
           ),
