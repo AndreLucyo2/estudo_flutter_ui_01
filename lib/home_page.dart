@@ -19,17 +19,14 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home Page')),
-      body: Container(
-          width: 200,
-          height: 200,
-          color: Colors.amber,
-          child: Center(
-            child: Container(
-              width: 100,
-              height: 100,
-              color: Colors.black,
-            ),
-          )),
+      body: Center(
+        child: Switch(
+          value: true,
+          onChanged: (value) {
+            print(value);
+          },
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
