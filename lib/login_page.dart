@@ -38,7 +38,6 @@ class _LoginPageState extends State<LoginPage> {
                     email = text;
                   },
                 ),
-
                 //Separador
                 Container(height: 20),
 
