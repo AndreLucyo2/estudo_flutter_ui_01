@@ -15,15 +15,20 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int contador = 0;
 
+  //pega o valor para mudar o estado:
+  bool isDarkTheme = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Home Page')),
       body: Center(
         child: Switch(
-          value: true,
+          value: isDarkTheme,
           onChanged: (value) {
-            print(value);
+            setState(() {
+              isDarkTheme = value;
+            });
           },
         ),
       ),
