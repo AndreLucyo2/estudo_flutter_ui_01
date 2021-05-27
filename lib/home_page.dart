@@ -1,3 +1,4 @@
+import 'package:estudo_flutter_ui_01/CustomWidget/custom_swtch.dart';
 import 'package:estudo_flutter_ui_01/app_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,16 +20,16 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home Page')),
+      appBar: AppBar(
+        title: Text('Home Page'),
+        actions: [
+          //Usa o componente customizado
+          CustomSwtch(),
+        ],
+      ),
       body: Center(
-        child: Switch(
-          //Seta o valor da variavel do controller:
-          value: AppController.getInstancia.isDarkTheme,
-          onChanged: (value) {
-            //Executa o metodo para alternar o thema:
-            AppController.getInstancia.alternarThema();
-          },
-        ),
+        //Usa o componente customizado
+        child: CustomSwtch(),
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
