@@ -27,9 +27,19 @@ class HomePageState extends State<HomePage> {
           CustomSwtch(),
         ],
       ),
-      body: Center(
-        //Usa o componente customizado
-        child: CustomSwtch(),
+      body: Container(
+        //pega toda a largura da tela
+        width: double.infinity,
+        //pega toda a altura da tela
+        height: double.infinity,
+        //fali a linhamentos da Coluna:
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Contagem $contador'),
+            CustomSwtch(),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
