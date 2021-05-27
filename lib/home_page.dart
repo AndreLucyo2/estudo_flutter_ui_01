@@ -32,13 +32,36 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         //pega toda a altura da tela
         height: double.infinity,
-        //linhamentos da linhas:
-        child: Column(
-          //Alinhamento do eixo principal Vertical
-          mainAxisAlignment: MainAxisAlignment.center,
-
+        //Usando o List Vew
+        child: ListView(
+          //Controlar o sentido do Scroll
+          scrollDirection: Axis.horizontal,
           children: [
             Text('Contagem $contador'),
+            Container(height: 10, color: Colors.amber),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.red),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.green),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.amber),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.red),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.green),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.amber),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.red),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.green),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.amber),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.red),
+            CustomSwtch(),
+            Container(height: 10, color: Colors.green),
+            CustomSwtch(),
             Container(height: 10, color: Colors.amber),
             CustomSwtch(),
             Container(height: 10, color: Colors.red),
