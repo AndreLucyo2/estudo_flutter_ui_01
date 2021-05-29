@@ -34,20 +34,11 @@ class HomePageState extends State<HomePage> {
         //Usando o List Vew
         child: ListView(
           //Controlar o sentido do Scroll
-          scrollDirection: Axis.horizontal,
+          scrollDirection: Axis.vertical,
           children: [
             Text('Contagem $contador'),
-            Container(width: 30, color: Colors.amber),
+            Container(width: 30, height: 30, color: Colors.amber),
             CustomSwtch(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              //Usando container como separador
-              children: [
-                Container(width: 30, height: 30, color: Colors.amber),
-                CustomSwtch(),
-              ],
-            ),
           ],
         ),
       ),
