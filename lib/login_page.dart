@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (email == 'als@gmail.com' && senha == '123') {
                       print('Parabens voce logou!');
                       //Video #19
-                      Navigator.of(context).pushNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('Senha ou email inválidos!');
                       return;
