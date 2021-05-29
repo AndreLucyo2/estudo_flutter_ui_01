@@ -1,4 +1,3 @@
-import 'package:estudo_flutter_ui_01/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -26,6 +25,12 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                //Video #21 Inserindo imagens da internet
+                Image.network(
+                    'https://t3.ftcdn.net/jpg/02/42/82/76/240_F_242827652_Gj3IL5w6gdufgSOESH7qVaYXN8ocQ6sX.jpg'),
+
+                //Separador
+                Container(height: 20),
                 //Campo de texto:
                 TextField(
                   //Definir o tipo de teclado
