@@ -70,11 +70,8 @@ class _LoginPageState extends State<LoginPage> {
                     //Sucesso!
                     if (email == 'als@gmail.com' && senha == '123') {
                       print('Parabens voce logou!');
-                      //Video #18
-                      Navigator.of(context).pushReplacement(
-                        //Navegação: chama uma tela do contexto Rotas manuais
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      //Video #19
+                      Navigator.of(context).pushNamed('/home');
                     } else {
                       print('Senha ou email inválidos!');
                       return;

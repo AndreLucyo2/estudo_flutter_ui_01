@@ -1,5 +1,6 @@
 //----------------------------------------------------------------------
 import 'package:estudo_flutter_ui_01/app_controller.dart';
+import 'package:estudo_flutter_ui_01/home_page.dart';
 import 'package:estudo_flutter_ui_01/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +20,13 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          //Abre a pagina:
-          home: LoginPage(),
+          //Video #19 - Definir a rota inicial
+          initialRoute: '/',
+          //Video #19 - Definir a rota nomeadas
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );
