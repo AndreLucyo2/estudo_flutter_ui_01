@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                       print('Parabens voce logou!');
                       //Video #18
                       Navigator.of(context).pushReplacement(
-                        //Navegação: chama uma tela do contexto
+                        //Navegação: chama uma tela do contexto Rotas manuais
                         MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     } else {
