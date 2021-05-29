@@ -23,14 +23,21 @@ class _LoginPageState extends State<LoginPage> {
             //adicionado Padding
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                //Separador
+                Container(height: 40),
+
                 //Video #21 Inserindo imagens da internet
-                Image.network(
-                    'https://t3.ftcdn.net/jpg/02/42/82/76/240_F_242827652_Gj3IL5w6gdufgSOESH7qVaYXN8ocQ6sX.jpg'),
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.network(
+                      'https://t3.ftcdn.net/jpg/02/42/82/76/240_F_242827652_Gj3IL5w6gdufgSOESH7qVaYXN8ocQ6sX.jpg'),
+                ),
 
                 //Separador
-                Container(height: 20),
+                Container(height: 30),
                 //Campo de texto:
                 TextField(
                   //Definir o tipo de teclado
