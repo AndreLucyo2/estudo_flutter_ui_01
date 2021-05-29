@@ -31,14 +31,20 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         //pega toda a altura da tela
         height: double.infinity,
-        //Usando o List Vew
-        child: ListView(
-          //Controlar o sentido do Scroll
-          scrollDirection: Axis.vertical,
+        //fali a linhamentos da Coluna:
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Contagem $contador'),
-            Container(width: 30, height: 30, color: Colors.amber),
             CustomSwtch(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(height: 30, width: 30, color: Colors.red),
+                Container(height: 30, width: 30, color: Colors.green),
+                Container(height: 30, width: 30, color: Colors.purple),
+              ],
+            ),
           ],
         ),
       ),
