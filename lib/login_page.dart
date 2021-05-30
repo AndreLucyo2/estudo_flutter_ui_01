@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -83,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                             //Cor de fundo do botão
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.blue)),
-                        child: Text('Entrar'),
+                        //Evento ao pressionar:
                         onPressed: () {
                           //Faz a validação do login:
                           if (email.isEmpty && senha.isEmpty) {
@@ -100,6 +101,11 @@ class _LoginPageState extends State<LoginPage> {
                             return;
                           }
                         },
+                        //botão estendido até a largura do seu widget pai
+                        child: Container(
+                            width: double.infinity,
+                            //Texto alinhado ao centro
+                            child: Text('Entrar', textAlign: TextAlign.center)),
                       ),
                     ],
                   ),
