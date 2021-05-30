@@ -41,7 +41,8 @@ class _LoginPageState extends State<LoginPage> {
               //video #24 Card
               Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.only(
+                      left: 10, right: 10, top: 20, bottom: 20),
                   child: Column(
                     children: [
                       //Campo de texto:
@@ -78,6 +79,10 @@ class _LoginPageState extends State<LoginPage> {
 
                       //Criar um botão
                       ElevatedButton(
+                        style: ButtonStyle(
+                            //Cor de fundo do botão
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.blue)),
                         child: Text('Entrar'),
                         onPressed: () {
                           //Faz a validação do login:
