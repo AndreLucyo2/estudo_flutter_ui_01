@@ -19,6 +19,41 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //video #25 Cria menu ambuger
+      drawer: Drawer(
+        child: Padding(
+          padding:
+              const EdgeInsets.only(left: 5, right: 0, top: 20, bottom: 20),
+          child: Column(
+            children: [
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                subtitle: Text('Tela de inicio.'),
+                onTap: () {
+                  print('Tela home');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Sair'),
+                subtitle: Text('Encerrar sessão.'),
+                onTap: () {
+                  Navigator.of(context).pushReplacementNamed('/');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Configurações'),
+                subtitle: Text('Tela de configurações.'),
+                onTap: () {
+                  print('Tela home');
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
       appBar: AppBar(
         title: Text('Home Page'),
         actions: [
