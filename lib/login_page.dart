@@ -32,8 +32,8 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 100,
                   height: 100,
-                  child: Image.network(
-                      'https://t3.ftcdn.net/jpg/02/42/82/76/240_F_242827652_Gj3IL5w6gdufgSOESH7qVaYXN8ocQ6sX.jpg'),
+                  //Video #22 - pegando a imagem de forma local
+                  child: Image.asset('assets/images/logo.jpg'),
                 ),
 
                 //Separador
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     if (email == 'als@gmail.com' && senha == '123') {
                       print('Parabens voce logou!');
                       //Video #19
-                      Navigator.of(context).pushReplacementNamed('/home');
+                      Navigator.of(context).pushNamed('/home');
                     } else {
                       print('Senha ou email inválidos!');
                       return;
