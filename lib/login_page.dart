@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       //Video #23 Uso do Stack - sbrepoe widget
       body: Stack(children: [
-        Container(color: Colors.purple),
+        Image.asset('assets/images/background.jpg'),
         _body(),
       ]),
     );
