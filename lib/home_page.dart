@@ -16,12 +16,6 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int contador = 0;
 
-  //url do avatar mostra um icone:
-  final avatar = CircleAvatar(
-    backgroundImage: NetworkImage(
-        'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png'),
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +24,10 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-                currentAccountPicture: avatar,
+                //Video #26
+                currentAccountPicture: ClipOval(
+                  child: Image.asset('assets/images/userAvatar.png'),
+                ),
                 accountName: Text('Andre Lucio da Silva'),
                 accountEmail: Text('andre.lucyo2@gmail.com')),
             ListTile(
