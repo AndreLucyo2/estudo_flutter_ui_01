@@ -24,8 +24,8 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-                //Video #26
-                currentAccountPicture: ClipOval(
+                currentAccountPicture: ClipRRect(
+                  borderRadius: BorderRadius.circular(55),
                   child: Image.asset('assets/images/userAvatar.png'),
                 ),
                 accountName: Text('Andre Lucio da Silva'),
