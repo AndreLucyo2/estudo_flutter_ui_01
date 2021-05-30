@@ -37,57 +37,68 @@ class _LoginPageState extends State<LoginPage> {
 
               //Separador
               Container(height: 30),
-              //Campo de texto:
-              TextField(
-                //Definir o tipo de teclado
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
+
+              //video #24 Card
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
+                    children: [
+                      //Campo de texto:
+                      TextField(
+                        //Definir o tipo de teclado
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          border: OutlineInputBorder(),
+                        ),
+                        //Pega o valor do campo:
+                        onChanged: (text) {
+                          email = text;
+                        },
+                      ),
+                      //Separador
+                      Container(height: 20),
+
+                      TextField(
+                        //Ocultar senha:
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          labelText: 'Senha',
+                          border: OutlineInputBorder(),
+                        ),
+                        //Pega o valor do campo:
+                        onChanged: (text) {
+                          senha = text;
+                        },
+                      ),
+
+                      //Separador
+                      Container(height: 20),
+
+                      //Criar um botão
+                      ElevatedButton(
+                        child: Text('Entrar'),
+                        onPressed: () {
+                          //Faz a validação do login:
+                          if (email.isEmpty && senha.isEmpty) {
+                            print('Campo senha e email nao podem ser vazios!');
+                            return;
+                          }
+                          //Sucesso!
+                          if (email == 'als@gmail.com' && senha == '123') {
+                            print('Parabens voce logou!');
+                            //Video #19
+                            Navigator.of(context).pushNamed('/home');
+                          } else {
+                            print('Senha ou email inválidos!');
+                            return;
+                          }
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-                //Pega o valor do campo:
-                onChanged: (text) {
-                  email = text;
-                },
-              ),
-              //Separador
-              Container(height: 20),
-
-              TextField(
-                //Ocultar senha:
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Senha',
-                  border: OutlineInputBorder(),
-                ),
-                //Pega o valor do campo:
-                onChanged: (text) {
-                  senha = text;
-                },
-              ),
-
-              //Separador
-              Container(height: 20),
-
-              //Criar um botão
-              ElevatedButton(
-                child: Text('Entrar'),
-                onPressed: () {
-                  //Faz a validação do login:
-                  if (email.isEmpty && senha.isEmpty) {
-                    print('Campo senha e email nao podem ser vazios!');
-                    return;
-                  }
-                  //Sucesso!
-                  if (email == 'als@gmail.com' && senha == '123') {
-                    print('Parabens voce logou!');
-                    //Video #19
-                    Navigator.of(context).pushNamed('/home');
-                  } else {
-                    print('Senha ou email inválidos!');
-                    return;
-                  }
-                },
               ),
             ],
           ),
@@ -108,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                 //ajusta imagem na altura tela
                 fit: BoxFit.cover)),
         //Cria uma mascara para escurecer a imagem:
-        Container(color: Colors.black.withOpacity(0.5)),
+        Container(color: Colors.blue.withOpacity(0.25)),
         _body(),
       ]),
     );
