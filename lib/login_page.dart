@@ -101,7 +101,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       //Video #23 Uso do Stack - sbrepoe widget
       body: Stack(children: [
-        Image.asset('assets/images/background.jpg'),
+        SizedBox(
+            //definir a imagem na largura tora de tela
+            height: MediaQuery.of(context).size.height,
+            child: Image.asset('assets/images/background.jpg',
+                //ajusta imagem na altura tela
+                fit: BoxFit.cover)),
+        //Cria uma mascara para escurecer a imagem:
+        Container(color: Colors.black.withOpacity(0.5)),
         _body(),
       ]),
     );
