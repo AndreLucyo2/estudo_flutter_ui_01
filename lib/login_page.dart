@@ -29,11 +29,17 @@ class _LoginPageState extends State<LoginPage> {
               Container(height: 40),
 
               //Video #21 Inserindo imagens da internet
-              Container(
-                width: 100,
-                height: 100,
-                //Video #22 - pegando a imagem de forma local
-                child: Image.asset('assets/images/logo.jpg'),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Container(
+                  //Video #22 - pegando a imagem de forma local
+                  child: Image.asset(
+                    'assets/images/logo.jpg',
+                    width: 150,
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
 
               //Separador
@@ -81,9 +87,10 @@ class _LoginPageState extends State<LoginPage> {
                       //Criar um botão
                       ElevatedButton(
                         style: ButtonStyle(
-                            //Cor de fundo do botão
-                            backgroundColor:
-                                MaterialStateProperty.all<Color>(Colors.blue)),
+                          //Cor de fundo do botão
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.blue),
+                        ),
                         //Evento ao pressionar:
                         onPressed: () {
                           //Faz a validação do login:
@@ -92,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                             return;
                           }
                           //Sucesso!
-                          if (email == 'als@gmail.com' && senha == '123') {
+                          if (email == 'teste@gmail.com' && senha == '123') {
                             print('Parabens voce logou!');
                             //Video #19
                             Navigator.of(context).pushNamed('/home');
@@ -130,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                 //ajusta imagem na altura tela
                 fit: BoxFit.cover)),
         //Cria uma mascara para escurecer a imagem:
-        Container(color: Colors.blue.withOpacity(0.25)),
+        Container(color: Colors.blue.withOpacity(0.50)),
         _body(),
       ]),
     );
