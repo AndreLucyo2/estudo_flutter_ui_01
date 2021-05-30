@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-            primarySwatch: Colors.green,
+            primarySwatch: Colors.lightBlue,
             //Aplicar uma condição para alternar thema: Aplicar um if ternario
             brightness: AppController.getInstancia.isDarkTheme
                 ? Brightness.dark

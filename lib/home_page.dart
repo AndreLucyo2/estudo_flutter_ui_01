@@ -16,42 +16,48 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   int contador = 0;
 
+  //url do avatar mostra um icone:
+  final avatar = CircleAvatar(
+    backgroundImage: NetworkImage(
+        'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png'),
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //video #25 Cria menu ambuger
       drawer: Drawer(
-        child: Padding(
-          padding:
-              const EdgeInsets.only(left: 5, right: 0, top: 20, bottom: 20),
-          child: Column(
-            children: [
-              ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
-                subtitle: Text('Tela de inicio.'),
-                onTap: () {
-                  print('Tela home');
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.logout),
-                title: Text('Sair'),
-                subtitle: Text('Encerrar sessão.'),
-                onTap: () {
-                  Navigator.of(context).pushReplacementNamed('/');
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Configurações'),
-                subtitle: Text('Tela de configurações.'),
-                onTap: () {
-                  print('Tela home');
-                },
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+                currentAccountPicture: avatar,
+                accountName: Text('Andre Lucio da Silva'),
+                accountEmail: Text('andre.lucyo2@gmail.com')),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              subtitle: Text('Tela de inicio.'),
+              onTap: () {
+                print('Tela home');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Sair'),
+              subtitle: Text('Encerrar sessão.'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Configurações'),
+              subtitle: Text('Tela de configurações.'),
+              onTap: () {
+                print('Abre a tela configurações');
+              },
+            ),
+          ],
         ),
       ),
       appBar: AppBar(
