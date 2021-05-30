@@ -13,6 +13,8 @@ class AppWidget extends StatelessWidget {
       animation: AppController.getInstancia,
       builder: (context, child) {
         return MaterialApp(
+          //tira sele debug
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch: Colors.lightBlue,
             //Aplicar uma condição para alternar thema: Aplicar um if ternario
